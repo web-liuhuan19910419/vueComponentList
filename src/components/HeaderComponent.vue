@@ -1,6 +1,8 @@
 <template>
   <div class="header-layout" :style="{'height': getHeaderHeight()}">
-     我是头部组件
+     <div class="left">
+       刘欢的组件库
+     </div>
   </div>
 </template>
 <script>
@@ -22,5 +24,13 @@
   .header-layout {
     width: 100%;
     background-color: #24292e;
+  }
+  .left {
+    float: left;
+    font-weight: 700;
+    color: #fff;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 20px;
   }
 </style>
