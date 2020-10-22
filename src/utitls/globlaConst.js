@@ -9,6 +9,9 @@ const globalConst = {
   },
   getShowSideMenuHeight () { // 计算侧边栏的高度函数
     return this.clientHeight() - this.headerHeight
+  },
+  getShowPageMenuHeight () { // 计算主页面高度函数
+    return this.clientHeight() - this.headerHeight
   }
 }
 export default globalConst
