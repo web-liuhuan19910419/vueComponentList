@@ -1,7 +1,7 @@
 <template>
   <div class="header-layout" :style="{'height': getHeaderHeight()}">
      <div class="left">
-       刘欢的组件库
+       欢迎来到月明心清的个人博客
      </div>
   </div>
 </template>

@@ -52,3 +52,13 @@ body {
   text-align: center;
   margin:0 auto;
 }
+.page-content-layout {
+  margin: 0 auto;
+  width: 75%;
+  padding-top: 10px;
+}
+.page-title-layout {
+  margin: 30px 0 .8em;
+  padding-bottom: .7em;
+  border-bottom: 1px solid #ddd;
+}

@@ -24,8 +24,10 @@
       menuList: [
         {name: '开发指南', checked: false, value: 1, 
           child: [
-            {name: '项目说明', checked: false, value: '11', pathName: 'ProjectInfo'}, 
-            {name: '项目结构', checked: false, value: '12', pathName: 'ProjectStructure'}
+            {name: '项目说明',       checked: false, value: '11', pathName: 'ProjectInfo'}, 
+            {name: '项目结构',       checked: false, value: '12', pathName: 'ProjectStructure'},
+            {name: '国际化',         checked: false, value: '13', pathName: 'International'},
+            {name: '阿里矢量图标',    checked: false, value: '13', pathName: 'International'}
           ]
         },
         {name: '组件列表', value: '2', checked: false,
@@ -42,16 +44,24 @@
           ]
         },
         {
-          name: '诗和远方', value: '3', checked: false,
+          name: '工作爬坑总结', value: '3', checked: false,
             child: [
               {
-                name: '随便瞎想', value: '31', checked: false
+                name: '日常爬过的坑', value: '31', checked: false
               },
               {
-                name: '美好回忆', value: '32', checked: false
+                name: '每日工作心得', value: '32', checked: false
               }
             ]
 
+        },
+        {
+          name: '读书笔记', value: '4', checked: false,
+          child: [
+            {
+              name: '读书笔记', value: '41', checked: false
+            }
+          ]
         }
       ]
     }

@@ -1,7 +1,7 @@
-<!--项目结构 -->
+<!-- 国际化说明 -->
 <template>
 <div class='page-content-layout'>
-  项目结构页面
+  <h2 class="page-title-layout">{{$t('message.pageTitle.interNational')}}</h2>
 </div>
 </template>
 
@@ -15,7 +15,7 @@ components: {},
 data() {
 //这里存放数据
 return {
-
+  language: 'en'
 };
 },
 //监听属性 类似于data概念
@@ -24,11 +24,13 @@ computed: {},
 watch: {},
 //方法集合
 methods: {
-
+  handleLanguage() {
+    this.$cookies.set("language", this.language)
+  },
 },
 //生命周期 - 创建完成（可以访问当前this实例）
 created() {
-
+  this.handleLanguage()
 },
 //生命周期 - 挂载完成（可以访问DOM元素）
 mounted() {

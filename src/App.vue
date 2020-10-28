@@ -4,7 +4,9 @@
     <div class="content-layout">
       <left-menu-component></left-menu-component>
       <div class="page-layout" :style="{'min-height': getPageHeight()}">
-        <router-view></router-view>
+        <transition name="slide-left">
+          <router-view></router-view>
+        </transition>
       </div>
     </div>
   </div>
@@ -34,7 +36,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 #app {
   width: 100%;
   background-color: #f9f9f9;
