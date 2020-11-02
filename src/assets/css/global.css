@@ -62,3 +62,6 @@ body {
   padding-bottom: .7em;
   border-bottom: 1px solid #ddd;
 }
+.page-new-content-layout {
+  text-align: left;
+}

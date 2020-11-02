@@ -56,7 +56,18 @@
 
         },
         {
-          name: '读书笔记', value: '4', checked: false,
+          name: '前端书籍笔记', value: '4', checked: false,
+          child: [
+            {
+              name: '红宝书', value: '41', checked: false
+            },
+            {
+              name: '你不知道的Javascript', value: '42', checked: false
+            }
+          ]
+        },
+        {
+          name: '天文地理', value: '4', checked: false,
           child: [
             {
               name: '读书笔记', value: '41', checked: false
