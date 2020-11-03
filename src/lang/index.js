@@ -21,9 +21,10 @@ const messages = {
 }
 // 获取当前浏览器语言
 const lang = navigator.language || navigator.userLanguage;
-
+console.log(lang)
+console.log(VueCookies.get('language'))
 const i18n = new VueI18n({
-  locale: VueCookies.get('language') || lang.substr(0, 2) || 'en', // set locale
+  locale: VueCookies.get('language') || lang.substr(0, 2) || 'zh', // set locale
   messages // set locale messages
 })
 

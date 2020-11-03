@@ -15,11 +15,35 @@
     <ul class="ul-layout">
       <li>(2) 在项目中的src下建立文件夹Lang如下图所示</li>
       <li><img src="@/assets/images/png3.png" alt="新建文件夹"></li>
-      <li>在Lang文件夹中建立三个js文件,分别是en.js, zh.js, index.js三个文件, 三个文件的内容分别如下图所示</li>
+      <li>(3)在Lang文件夹中建立三个js文件,分别是en.js, zh.js, index.js三个文件, 三个文件的内容分别如下图所示</li>
       <li>
         <big-image-component v-if="showImg1" @clickit="viewImg1" :imgSrc="imgSrc1"></big-image-component>
         <img src="@/assets/images/png4.png" @click="clickImg1($event)" style="width: 361px; height: 162px;">
       </li>
+      <li>
+        <big-image-component v-if="showImg2" @clickit="viewImg2" :imgSrc="imgSrc2"></big-image-component>
+        <img src="@/assets/images/png5.png" @click="clickImg2($event)" style="width: 361px; height: 162px;">
+      </li>
+      <li>
+        <big-image-component v-if="showImg3" @clickit="viewImg3" :imgSrc="imgSrc3"></big-image-component>
+        <img src="@/assets/images/png6.png" @click="clickImg3($event)" style="width: 361px; height: 162px;">
+      </li>
+    </ul>
+    <ul class="ul-layout">
+      <li>(4)在main.js里面引入相关配置</li>
+      <li>
+        <img src="@/assets/images/png7.png" alt="">
+      </li>
+    </ul>
+    <ul class="ul-layout">
+      <li>(4)切换语言</li>
+      <li>
+        <img src="@/assets/images/png8.png" alt="">
+      </li>
+    </ul>
+    <ul class="ul-layout">
+      <li>(5)遇到的难点</li>
+      <li>因为项目中一般都是多人合作的,en.js 和 zh.js文件大家都会经常改动，一致性很差，加上开发人员对一些专业名词翻译的并不准确，所以翻译会叫专业人士非开发人员翻译，这就需要开发人员能将js转化为excel,然后又导入到项目中，需要开发一个工具。11111</li>
     </ul>
   </div>
 </div>
@@ -37,9 +61,12 @@ components: {
 data() {
 //这里存放数据
 return {
-  language: 'en',
   imgSrc1: '@/assets/images/png4.png',
-  showImg1: false
+  imgSrc2: '@/assets/images/png5.png',
+  imgSrc3: '@/assets/images/png6.png',
+  showImg1: false,
+  showImg2: false,
+  showImg3: false
 };
 },
 //监听属性 类似于data概念
@@ -48,21 +75,33 @@ computed: {},
 watch: {},
 //方法集合
 methods: {
-  handleLanguage() {
-    this.$cookies.set("language", this.language)
-  },
   clickImg1 (e) {
     console.log(e.currentTarget.src)
     this.imgSrc1 = e.currentTarget.src
     this.showImg1 = true
   },
+  clickImg2 (e) {
+    console.log(e.currentTarget.src)
+    this.imgSrc2 = e.currentTarget.src
+    this.showImg2 = true
+  },
+  clickImg3 (e) {
+    console.log(e.currentTarget.src)
+    this.imgSrc3 = e.currentTarget.src
+    this.showImg3 = true
+  },
   viewImg1 () {
     this.showImg1 = false
+  },
+  viewImg2 () {
+    this.showImg2 = false
+  },
+  viewImg3 () {
+    this.showImg3 = false
   }
 },
 //生命周期 - 创建完成（可以访问当前this实例）
 created() {
-  this.handleLanguage()
 },
 //生命周期 - 挂载完成（可以访问DOM元素）
 mounted() {

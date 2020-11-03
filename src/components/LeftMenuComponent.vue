@@ -82,6 +82,8 @@
       return this.$globalConst.sideMenuWidth + 'px'
     },
     getMenuHeight () {
+      let content = this.$globalConst.getShowSideMenuHeight()
+      console.log(content)
       return this.$globalConst.getShowSideMenuHeight() + 'px'
     },
     onUnfold (item, index) {
@@ -106,6 +108,7 @@
   .left-menu-layout {
     background-color: #ffffff;
     float: left;
+    overflow: auto;
   }
   .list {
     text-align: left;

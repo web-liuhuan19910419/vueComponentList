@@ -1,6 +1,6 @@
 <!--项目说明页面 -->
 <template>
-  <div class='page-layout'>
+  <div class='page-content-layout'>
     我是项目说明页面
   </div>
 </template>

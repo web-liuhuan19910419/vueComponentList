@@ -59,8 +59,8 @@ overflow: hidden;
 max-width: 100%;
 display: block;
 position: absolute;
-left: 40%;
-top: 40%;
+left: 20%;
+top: 20%;
 margin: auto;
 z-index: 1000;
 }
