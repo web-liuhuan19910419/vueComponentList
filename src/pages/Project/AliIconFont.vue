@@ -1,15 +1,8 @@
-<!--项目结构 -->
+<!--阿里矢量图标的使用-->
 <template>
 <div class='page-content-layout'>
-  <h2 class="page-title-layout">{{$t('message.pageTitle.projectStructure')}}</h2>
-  <div class="page-new-content-layout">
-    <ul class="ul-layout">
-      <li>项目UI布局</li>
-      <li><img src="@/assets/images/png9.png" alt=""></li>
-      <li>项目文件夹结构</li>
-      <li><img src="@/assets/images/png10.png" alt=""></li>
-    </ul>
-  </div>
+  <h2 class="page-title-layout">{{$t('message.pageTitle.alicont')}}</h2>
+  <ul class="ul-layout"></ul>
 </div>
 </template>
 
@@ -52,10 +45,5 @@ activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
 }
 </script>
 <style scoped>
-  .ul-layout {
-    margin-top: 20px;
-  }
-  .ul-layout > li {
-    margin-top: 10px;
-  }
+
 </style>

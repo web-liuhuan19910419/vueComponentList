@@ -27,7 +27,7 @@
             {name: '项目说明',       checked: false, value: '11', pathName: 'ProjectInfo'}, 
             {name: '项目结构',       checked: false, value: '12', pathName: 'ProjectStructure'},
             {name: '国际化',         checked: false, value: '13', pathName: 'International'},
-            {name: '阿里矢量图标',    checked: false, value: '13', pathName: 'International'}
+            {name: '阿里矢量图标',    checked: false, value: '13', pathName: 'AliIconFont'}
           ]
         },
         {name: '组件列表', value: '2', checked: false,
@@ -70,7 +70,10 @@
           name: '天文地理', value: '4', checked: false,
           child: [
             {
-              name: '读书笔记', value: '41', checked: false
+              name: '快速计算', value: '41', checked: false, pathName: 'Caculation'
+            },
+            {
+              name: '逻辑推理', value: '42', checked: false
             }
           ]
         }

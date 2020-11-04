@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 const ProjectInfo = () => import('@/pages/Project/ProjectInfo')
 const ProjectStructure = () => import('@/pages/Project/ProjectStructure')
 const InterNational = () => import('@/pages/Project/InterNational')
+const Caculation = () => import('@/pages/TianWen/Caculation')
+const AliIconFont = () => import('@/pages/Project/AliIconFont')
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -26,14 +28,24 @@ export default new VueRouter({
       component: ProjectInfo
     },
     {
-      path: '/peoject/structure',
+      path: '/project/structure',
       name: 'ProjectStructure',
       component: ProjectStructure
     },
     {
-      path: '/peoject/international',
+      path: '/project/international',
       name: 'International',
       component: InterNational
+    },
+    {
+      path: '/tianwen/Caculation',
+      name: 'Caculation',
+      component: Caculation
+    },
+    {
+      path: '/project/iconUse',
+      name: 'AliIconFont',
+      component: AliIconFont
     }
   ]
 })
