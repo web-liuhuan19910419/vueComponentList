@@ -5,6 +5,7 @@ const ProjectStructure = () => import('@/pages/Project/ProjectStructure')
 const InterNational = () => import('@/pages/Project/InterNational')
 const Caculation = () => import('@/pages/TianWen/Caculation')
 const AliIconFont = () => import('@/pages/Project/AliIconFont')
+const CssUnknown = () => import('@/pages/ReaderBooks/CssUnknown')
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -46,6 +47,11 @@ export default new VueRouter({
       path: '/project/iconUse',
       name: 'AliIconFont',
       component: AliIconFont
+    },
+    {
+      path: '/ReaderBooks/CssUnknown',
+      name: 'CssUnknown',
+      component: CssUnknown
     }
   ]
 })

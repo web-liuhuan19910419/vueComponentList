@@ -5,7 +5,8 @@ export default {
       caculation: 'Caculation',
       projectInfo: 'Project Info',
       projectStructure: 'Project Structure',
-      alicont: 'Ali Icon Use'
+      alicont: 'Ali Icon Use',
+      unknownCss: 'Unknow CSS'
     }
   }
 }

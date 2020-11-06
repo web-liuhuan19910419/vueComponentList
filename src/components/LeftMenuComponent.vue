@@ -59,6 +59,9 @@
           name: '前端书籍笔记', value: '4', checked: false,
           child: [
             {
+              name: '你不知道的CSS', value: '40', checked: false, pathName: 'CssUnknown'
+            },
+            {
               name: '红宝书', value: '41', checked: false
             },
             {
