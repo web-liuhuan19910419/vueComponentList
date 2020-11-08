@@ -49,9 +49,27 @@
       </div>
     </div>
   </div>
-  <div style="margin-top: 80px;">
-    <div class="before-after-layout"></div>
+  <div style="margin-top: 100px;">
+    <p class="margin-ten-layout text-title-layout" style="text-align: left;">(4)white-space属性的各个值的区别</p>
+    <ul class="ul-layout">
+      <li>
+        (1)normal: 容器放不下时候会自动换行，遇到换行标签也会换行，就是遇到多个空格时候会处理成一个空格。
+      </li>
+      <li>
+        (2)pre: 容器放不下的时候不会自动换行，遇到换行符会换行，遇到多个空格时候不会处理成一个空格。
+      </li>
+      <li>
+        (3)nowrap: 容器放不下的时候不会自动换行，会溢出，遇到换行符会换行，遇到多个空格的时候处理成一个空格。
+      </li>
+      <li>
+        (4)pre-wrap: 容器放不下的时候会换行，遇到换行符的时候会换行，遇到多个空格的时候不会处理成一个空格。
+      </li>
+    </ul>
   </div>
+   <vue-tinymce
+      v-model="content"
+      :setup="setup"
+      :setting="setting" />
 </div>
 </template>
 
@@ -65,6 +83,10 @@ components: {},
 data() {
 //这里存放数据
 return {
+  content: '<p>html content</p>',
+  setting: {
+    height: 500
+  }
 
 };
 },
@@ -74,11 +96,13 @@ computed: {},
 watch: {},
 //方法集合
 methods: {
+  setup(editor) {
+    console.log(editor)
+  },
   moreText () {
     console.log(this.$refs.content.innerHTML)
     this.$refs.content.innerHTML += '新增文字'
   }
-
 },
 //生命周期 - 创建完成（可以访问当前this实例）
 created() {
@@ -187,4 +211,12 @@ activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
     content: "...\A..";
     white-space: pre-wrap;
 }
+ .ul-layout {
+    margin-top: 20px;
+  }
+  .ul-layout > li {
+    width:800px;
+    margin-top: 10px;
+    text-align: left;
+  }
 </style>

@@ -20,6 +20,12 @@ Vue.use(elementUI, {
   i18n: (key, value) => i18n.t(key, value)
 })
 
+// 引入富文本编辑器
+import VueTinymce from "@packy-tang/vue-tinymce"
+ //安装组件
+Vue.use(VueTinymce)
+
+
 Vue.config.productionTip = false
 Vue.prototype.$globalConst = globalConst
 new Vue({
