@@ -5,6 +5,7 @@ export default {
       caculation: 'Caculation',
       projectInfo: 'Project Info',
       projectStructure: 'Project Structure',
+      richText: 'Rich Text',
       alicont: 'Ali Icon Use',
       unknownCss: 'Unknow CSS'
     }

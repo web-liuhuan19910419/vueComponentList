@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-9-30: Created.
+-->
+<svg>
+<metadata>
+Created by iconfont
+</metadata>
+<defs>
+
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    ascent="896"
+    descent="-128"
+  />
+    <missing-glyph />
+    
+    <glyph glyph-name="before" unicode="&#58881;" d="M715.646 746.039c-24.994 24.994-65.51600001 24.994-90.51 0L308.354 429.255c-24.994-24.994-24.994-65.51600001 0-90.51l316.783-316.784c24.994-24.994 65.51600001-24.994 90.51 0s24.994 65.51600001 0 90.51L444.118 384l271.528 271.529C740.641 680.523 740.641 721.045 715.646 746.039z"  horiz-adv-x="1024" />
+
+    
+
+
+  </font>
+</defs></svg>

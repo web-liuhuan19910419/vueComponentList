@@ -27,7 +27,8 @@
             {name: '项目说明',       checked: false, value: '11', pathName: 'ProjectInfo'}, 
             {name: '项目结构',       checked: false, value: '12', pathName: 'ProjectStructure'},
             {name: '国际化',         checked: false, value: '13', pathName: 'International'},
-            {name: '阿里矢量图标',    checked: false, value: '13', pathName: 'AliIconFont'}
+            {name: '阿里矢量图标',    checked: false, value: '14', pathName: 'AliIconFont'},
+            {name: '富文本',         checked: false, value: '15', pathName: 'TinymceEditor'}
           ]
         },
         {name: '组件列表', value: '2', checked: false,

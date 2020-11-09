@@ -3,7 +3,10 @@
 <div class='page-content-layout'>
   <h2 class="page-title-layout">{{$t('message.pageTitle.unknownCss')}}</h2>
   <div class="page-new-content-layout">
-    <div class="margin-ten-layout">
+    <transition :name="transitionName">
+      <router-view></router-view>
+    </transition>
+    <!-- <div class="margin-ten-layout">
       <p class="margin-ten-layout text-title-layout">(1)记住无宽度准则: "外部尺寸Block元素的流动性示意实例"</p>
       <h4 class="margin-ten-layout">无宽度，借助流动性</h4>
       <div class="nav">
@@ -64,12 +67,14 @@
       <li>
         (4)pre-wrap: 容器放不下的时候会换行，遇到换行符的时候会换行，遇到多个空格的时候不会处理成一个空格。
       </li>
-    </ul>
+    </ul> -->
   </div>
-   <vue-tinymce
-      v-model="content"
-      :setup="setup"
-      :setting="setting" />
+  <div class="css-foot-layout">
+    <div class="css-foot-container-layout">
+      <i class="iconfont icon-before foot-left-layout" @click="goLeft"></i>
+      <i class="iconfont icon-to-right foot-right-layout" @click="goRight"></i>
+    </div>
+  </div>
 </div>
 </template>
 
@@ -83,10 +88,7 @@ components: {},
 data() {
 //这里存放数据
 return {
-  content: '<p>html content</p>',
-  setting: {
-    height: 500
-  }
+  transitionName: ''
 
 };
 },
@@ -211,12 +213,30 @@ activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
     content: "...\A..";
     white-space: pre-wrap;
 }
- .ul-layout {
-    margin-top: 20px;
-  }
-  .ul-layout > li {
-    width:800px;
-    margin-top: 10px;
-    text-align: left;
-  }
+.ul-layout {
+  margin-top: 20px;
+}
+.ul-layout > li {
+  width:800px;
+  margin-top: 10px;
+  text-align: left;
+}
+.css-foot-layout {
+  text-align: center;
+}
+.css-foot-container-layout {
+  display: inline-block;
+  width: 100px;
+  height:30px;
+}
+.foot-left-layout {
+  float: left;
+  width: 30px;
+  height: 30px;
+}
+.foot-right-layout {
+  float: right;
+  width: 30px;
+  height: 30px;
+}
 </style>
