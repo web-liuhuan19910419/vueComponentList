@@ -1,11 +1,13 @@
-<!-- 你不知道的Css读书感想 -->
+<!-- 你不知道的Css读书感想 cssUnknown页面-->
 <template>
 <div class='page-content-layout'>
   <h2 class="page-title-layout">{{$t('message.pageTitle.unknownCss')}}</h2>
   <div class="page-new-content-layout">
-    <transition :name="transitionName">
-      <router-view></router-view>
-    </transition>
+    <div>
+      <transition :name="transitionName">
+        <router-view></router-view>
+      </transition>
+    </div>
     <!-- <div class="margin-ten-layout">
       <p class="margin-ten-layout text-title-layout">(1)记住无宽度准则: "外部尺寸Block元素的流动性示意实例"</p>
       <h4 class="margin-ten-layout">无宽度，借助流动性</h4>
@@ -81,21 +83,28 @@
 <script>
 //这里可以导入其他文件（比如：组件，工具js，第三方插件js，json文件，图片文件等等）
 //例如：import 《组件名称》 from '《组件路径》';
-
+// import CssPage1 from './CSS/CssPage1'
 export default {
 //import引入的组件需要注入到对象中才能使用
-components: {},
+components: {
+  // CssPage1
+},
 data() {
 //这里存放数据
 return {
-  transitionName: ''
-
+  transitionName: '', // 路由嵌套动画
+  currentMetaIndex: 1,// 当前嵌套的index
+  clickFlag: false
 };
 },
 //监听属性 类似于data概念
 computed: {},
 //监控data中的数据变化
-watch: {},
+watch: {
+  '$route' (to, from) {
+    console.log(to, from)
+  }
+},
 //方法集合
 methods: {
   setup(editor) {
@@ -104,6 +113,20 @@ methods: {
   moreText () {
     console.log(this.$refs.content.innerHTML)
     this.$refs.content.innerHTML += '新增文字'
+  },
+  goLeft () {
+    console.log('向左跳转')
+    console.log(this.$route.meta.index)
+    if (this.$route.meta.index !== 1) {
+      this.$router.push({name: 'CssPage' + (this.$route.meta.index - 1)})
+    }
+  },
+  goRight () {
+    console.log('向右跳转')
+    console.log(this.$route.meta.index)
+    if (this.$route.meta.index !== 3) {
+      this.$router.push({name: 'CssPage' + (this.$route.meta.index + 1)})
+    }
   }
 },
 //生命周期 - 创建完成（可以访问当前this实例）
@@ -112,7 +135,8 @@ created() {
 },
 //生命周期 - 挂载完成（可以访问DOM元素）
 mounted() {
-
+ console.log(this.$route.meta.index)
+ console.log('页面刷新啦')
 },
 beforeCreate() {}, //生命周期 - 创建之前
 beforeMount() {}, //生命周期 - 挂载之前

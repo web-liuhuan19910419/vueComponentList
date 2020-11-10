@@ -9,6 +9,7 @@ const AliIconFont = () => import('@/pages/Project/AliIconFont')
 const CssUnknown = () => import('@/pages/ReaderBooks/CssUnknown')
 const CssPage1 = () => import('@/pages/ReaderBooks/CSS/CssPage1')
 const CssPage2 = () => import('@/pages/ReaderBooks/CSS/CssPage2')
+const CssPage3 = () => import('@/pages/ReaderBooks/CSS/CssPage3')
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -57,24 +58,47 @@ export default new VueRouter({
       component: AliIconFont
     },
     {
-      path: '/ReaderBooks/CssUnknown',
+      path: '/readerBooks/CssUnknown',
       name: 'CssUnknown',
       component: CssUnknown,
-      child: [
+      meta: {
+        index: 1
+      },
+      children: [         // 路由嵌套
         {
-          path: '/ReaderBooks/CssUnknown/csspage1',
+          path: 'csspage1',
           name: 'CssPage1',
           component: CssPage1,
           meta:{
-            index: 0
+            index: 1
           }
         },
+        // {
+        //   path: '*',
+        //   redirect: {
+        //     name: 'CssPage1'
+        //   }
+        // },
+        // {
+        //   path: '/',
+        //   redirect: {
+        //     name: 'CssPage1'
+        //   }
+        // },
         {
-          path: '/ReaderBooks/CssUnknown/csspage2',
+          path: 'csspage2',
           name: 'CssPage2',
           component: CssPage2,
           meta:{
-            index: 1
+            index: 2
+          }
+        },
+        {
+          path: 'csspage3',
+          name: 'CssPage3',
+          component: CssPage3,
+          meta:{
+            index: 3
           }
         }
       ]

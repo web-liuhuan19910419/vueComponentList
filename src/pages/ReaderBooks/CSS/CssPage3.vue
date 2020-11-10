@@ -2,23 +2,8 @@
 <template>
 <div class=''>
   <div class="">
-    <p class="margin-ten-layout text-title-layout">(1)记住无宽度准则: "外部尺寸Block元素的流动性示意实例"</p>
-      <h4 class="margin-ten-layout">无宽度，借助流动性</h4>
-      <div class="nav">
-        <a href="" class="nav-a">导航1</a>
-        <a href="" class="nav-a">导航2</a>
-        <a href="" class="nav-a">导航3</a>
-      </div>
-      <h4>width:100%</h4>
-     <div class="nav">
-      <a href="" class="nav-a width">导航1</a>
-      <a href="" class="nav-a width">导航2</a>
-      <a href="" class="nav-a width">导航3</a>
-     </div>
-    </div>
-    <div class="margin-ten-layout">
-      <img src="@/assets/images/png13.png" alt="">
-    </div>
+    我是page3页面
+  </div>
 </div>
 </template>
 
@@ -60,22 +45,6 @@ destroyed() {}, //生命周期 - 销毁完成
 activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
 }
 </script>
-<style scoped>
-.width {
-  width: 100%;
-}
+<style>
 
-.nav {
-  background-color: #cd0000;
-}
-.nav-a {
-  display: block;
-  margin: 0 10px;
-  padding: 9px 10px;
-  border-bottom: 1px solid #b70000;
-  border-top: 1px solid #de3636;
-  color: #fff;
-}
-.nav-a:first-child { border-top: 0; }
-.nav-a + .nav-a + .nav-a { border-bottom: 0;}
 </style>
