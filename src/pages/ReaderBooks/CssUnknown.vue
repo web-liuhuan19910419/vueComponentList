@@ -246,6 +246,9 @@ activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
   text-align: left;
 }
 .css-foot-layout {
+  position: absolute;
+  left: 0;
+  bottom: 0;
   text-align: center;
 }
 .css-foot-container-layout {
