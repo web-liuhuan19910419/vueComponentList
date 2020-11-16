@@ -3,8 +3,8 @@
 <div class=''>
   <div class="">
     <p class="margin-ten-layout text-title-layout">(1)记住无宽度准则: "外部尺寸Block元素的流动性示意实例"</p>
-      <h4 class="margin-ten-layout">无宽度，借助流动性</h4>
-      <div class="nav">
+      <h4 class="margin-ten-layout">无宽度，借助流动性,父元素有宽度，子元素没有设置宽度，子元素会默认充满父元素，这就是借助css的宽度流动性。</h4>
+      <div class="nav" style="margin-top: 15px;">
         <a href="" class="nav-a">导航1</a>
         <a href="" class="nav-a">导航2</a>
         <a href="" class="nav-a">导航3</a>
@@ -17,7 +17,7 @@
      </div>
     </div>
     <div class="margin-ten-layout">
-      <img src="@/assets/images/png13.png" alt="">
+      <img src="@/assets/images/png13.png" alt="" style="width: 900px; height:300px;">
     </div>
 </div>
 </template>
@@ -66,6 +66,7 @@ activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
 }
 
 .nav {
+  width: 80%;
   background-color: #cd0000;
 }
 .nav-a {
