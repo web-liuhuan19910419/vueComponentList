@@ -34,6 +34,9 @@
         {name: '组件列表', value: '2', checked: false,
           child: [
             {
+              name: '基本组件', value: '20', checked: false, pathName: 'ComponentList'
+            },
+            {
               name: '地址选择组件', value: '21', checked: false
             }, 
             {

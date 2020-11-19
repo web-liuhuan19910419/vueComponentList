@@ -7,6 +7,7 @@ const TinymceEditor = () => import('@/pages/Project/TinymceEditor')
 const Caculation = () => import('@/pages/TianWen/Caculation')
 const AliIconFont = () => import('@/pages/Project/AliIconFont')
 const CssUnknown = () => import('@/pages/ReaderBooks/CssUnknown')
+const ComponentList = () => import('@/pages/ComponentList/ComponentList')
 const CssPage1 = () => import('@/pages/ReaderBooks/CSS/CssPage1')
 const CssPage2 = () => import('@/pages/ReaderBooks/CSS/CssPage2')
 const CssPage3 = () => import('@/pages/ReaderBooks/CSS/CssPage3')
@@ -56,6 +57,11 @@ export default new VueRouter({
       path: '/project/iconUse',
       name: 'AliIconFont',
       component: AliIconFont
+    },
+    {
+      path: '/ComponentList/ComponentList',
+      name: 'ComponentList',
+      component: ComponentList
     },
     {
       path: '/readerBooks/CssUnknown',

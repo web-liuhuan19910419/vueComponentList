@@ -7,7 +7,8 @@ export default {
       projectStructure: 'Project Structure',
       richText: 'Rich Text',
       alicont: 'Ali Icon Use',
-      unknownCss: 'Unknow CSS'
+      unknownCss: 'Unknow CSS',
+      baseComponent: 'Base Component',
     }
   }
 }
