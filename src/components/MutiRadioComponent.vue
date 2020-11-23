@@ -1,9 +1,9 @@
-<!--常用的基础组件之单选组件-->
+<!--常用的基础组件之多选组件-->
 <template>
   <div class="radio-wrap">
     <p :style="{'width': titleWidth}" class="title"><span class="ismust">*</span>{{title}}</p>  
     <ul :class="[!isVertical ? 'hirizon' : 'vertical']">
-       <li v-for="(item, index) of radioOptions" :key="index" @click="radioChangeEvent(item, index)" :class="[item.value === '2' ? 'disableStyle' : item.value === '1' ? 'activeStyle' : 'noActiveStyle']" :style="{marginLeft: marginLeftSet, marginTop: marginTopSet}">
+       <li v-for="(item, index) of radioOptions" :key="index" @click="radioChangeEvent(item, index)" :class="[item.value === '2' ? 'disableStyle' : item.value === '1' ? 'activeStyle' : 'noActiveStyle']"  :style="{marginLeft: marginLeftSet, marginTop: marginTopSet}">
           <img :src="chooseSrc(item.value)" alt="" class="imageSize">
           <span class="label">{{item.name}}</span>
        </li>
@@ -39,7 +39,7 @@ export default {
     },
     marginTopSet: {
      type: String,
-     default: '0px'
+    default: '0px'
     }
   },
   data () {
@@ -49,15 +49,6 @@ export default {
 		radioChangeEvent (item, index) {
       console.log(item, index)
       console.log(this.radioOptions)
-      for (let inx = 0; inx < this.radioOptions.length; inx++) { // 单选
-        if (item.value !== '2') {
-          if (this.radioOptions[inx].value !== '2') {
-            this.radioOptions[inx].value = '0'
-          } else {
-            this.radioOptions[inx].value = '2'
-          }
-        }
-      }
       if (item.value !== '2') {
         item.value = ((item.value === '1') ? '0' : '1')
       }
@@ -66,11 +57,11 @@ export default {
 		},
     chooseSrc (value) {
       if (value === '0') { // 未选中
-        return require('../assets/images/radio/radio.png')
+        return require('../assets/images/mutiRadio/normal.png')
       } else if (value === '1') { // 选中
-        return require('../assets/images/radio/radio-active.png')
+        return require('../assets/images/mutiRadio/actived.png')
 			} else { // 禁用
-        return require('../assets/images/radio/radio-disabled.png')
+        return require('../assets/images/mutiRadio/disabled.png')
 			}
     }
   }
@@ -90,8 +81,8 @@ export default {
   color:#ff0000;
 }
 .imageSize{
-  width: 22px;
-  height: 22px;
+  width: 16px;
+  height: 16px;
 }
 .label {
   font-size: 12px;
