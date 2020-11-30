@@ -2,7 +2,7 @@
   <!--树形下拉导航控件-->
    <div class="left-menu-layout" :style="{'width': getMenuWidth(), 'height': getMenuHeight()}">
      <ul v-for="(item, index) of menuList" :key="index">
-        <li :class="['list','iconfont', item.checked ? 'icon-tubiao-' : 'icon-jiantou']" @click="onUnfold(item, index)">
+        <li :class="['list','icon iconfont', item.checked ? 'icon-xiala' : 'icon-rightarrow']" @click="onUnfold(item, index)">
            <span class="list-item-layout">{{item.name}}</span>
         </li>
         <ul v-show="item.checked && item.child.length !== 0" class="list-ul-child">

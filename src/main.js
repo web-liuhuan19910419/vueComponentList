@@ -4,10 +4,13 @@ import router from './router'
 import globalConst from './utitls/globlaConst' // 全局一些常量
 import '@/assets/css/global.css' // 全局样式
 
-import '@/assets/icon/xiala/iconfont.css' // 阿里矢量图标
 import '@/assets/icon/youfanye/iconfont.css'
+import '@/assets/icon/xiala/iconfont.css' // 阿里矢量图标
 import '@/assets/icon/zuofanye/iconfont.css'
 import '@/assets/icon/youfanye/iconfont.css'
+import '@/assets/icon/upload/iconfont.css'
+
+import '@/assets/icons/iconfont.css' // 引入项目中的所有的icon
 
 // 引入vue element组件库
 import elementUI from "element-ui"
