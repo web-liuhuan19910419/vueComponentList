@@ -1,5 +1,6 @@
 <template>
-    <button @click="ClickHandler()" :class="styles" :disabled="disabled">{{ text }}</button>
+    <button v-if="loading" @click="ClickHandler()" :class="[this.design, this.type, loading ? 'icon iconfont icon-loading' : '']" :disabled="loading">{{ text }}</button>
+    <button v-else @click="ClickHandler()" :class="styles" :disabled="disabled">{{ text }}</button>
 </template>
 
 <script>
@@ -29,6 +30,10 @@ export default {
         type: {
             type: String,
             default: 'normal'
+        },
+        loading: {
+            type: Boolean,
+            default: false
         }
     },
     methods: {
@@ -44,12 +49,17 @@ export default {
                 return ['sp-button', this.design, this.icon, this.type]
             }
         }
+    },
+    mounted () {
+      
+    },
+    watch: {
+      
     }
 }
 </script>
 
 <style scoped>
-/* 引入矢量图标 */
 button {
     width: 100px;
     height: 30px;
@@ -103,6 +113,9 @@ button {
     color: #3a8ee6;
     border: none;
     cursor: not-allowed;
+}
+.loading-style{
+    opacity: 0.5;
 }
 /* warning style*/
 .warning {

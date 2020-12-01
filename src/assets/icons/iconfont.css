@@ -25,6 +25,21 @@
 
 .icon-loading:before {
   content: "\e6da";
+  display: inline-block!important;
+  animation: loadingImage 1.5s infinite linear;
+}
+@keyframes loadingImage {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  50% {
+      transform: rotate(180deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
 }
 
 .icon-xiala:before {
