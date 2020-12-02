@@ -76,12 +76,15 @@
           <button-component :loading= "true" type="primary" design="fillet" style="margin-left: 10px;"></button-component>
         </div>
         <div style="display: flex; margin-top: 5px;">
-          <text-button-component type="normal" text="文字按钮"></text-button-component>
+          <text-button-component type="normal"   text="文字按钮"></text-button-component>
           <text-button-component type="disabled" text="文字按钮禁用" style="margin-left: 10px;"></text-button-component>
         </div>
         <div style="margin-top: 10px;">
-         <input-component icon="right icon iconfont icon-sousuosearch82" placeholderInfo="带有图标的input框框"></input-component>
+          <!-- <input-component icon="right icon iconfont icon-sousuosearch82" placeholderInfo="带有图标的input框框"></input-component>
+          <input-component placeholderInfo="带有清除的输入框" :clearable="true"></input-component>
+          <input type="text" autofocus="autofocus"> -->
         </div>
+        <input type="text" name="fname" autofocus />
       </div>
      </div>
   </div>
@@ -92,11 +95,11 @@ import RadioComponent from '@/components/RadioComponent'
 import MutiRadioComponent from '@/components/MutiRadioComponent'
 import ButtonComponent from '@/components/ButtonComponent'
 import TextButtonComponent from '@/components/TextButtonComponent'
-import InputComponent from '@/components/InputComponent'
+// import InputComponent from '@/components/InputComponent'
 export default {
   name: 'ComponentList',  
   components: {
-    InputComponent,
+    // InputComponent,
     RadioComponent,
     MutiRadioComponent,
     ButtonComponent,
@@ -104,6 +107,9 @@ export default {
   },
   data () {
     return {
+      data1: '111',
+      data2: '222',
+      data3: '444',
       radioOptions: [
         {name: '江西', value: '1'},
         {name: '湖南', value: '0'},
@@ -115,6 +121,22 @@ export default {
         {name: '江苏', value: '0'},
         {name: '上海', value: '1'},
         {name: '杭州', value: '2'}
+      ],
+      ptions1: [
+        {name: 'YES', checked: false},
+        {name: 'NO', checked: true}
+      ],
+      ptions2: [
+        {name: 'YES1', checked: false},
+        {name: 'NO1', checked: true}
+      ],
+       ptions3: [
+        {name: 'YES11', checked: false},
+        {name: 'NO11', checked: true}
+      ],
+      ptions4: [
+        {name: 'YES22', checked: false},
+        {name: 'NO122', checked: true}
       ]
     }
   },

@@ -1,7 +1,7 @@
 <template>
   <div class="box">
-    <i :class="styles"></i>
-    <input type="text" :placeholder="placeholderInfo">
+    <i :class="styles" @click="clickIcon"></i>
+    <input type="text" :placeholder="placeholderInfo" v-model="value" autofocus="autofocus" />
   </div>
 </template>
 
@@ -16,19 +16,38 @@ export default {
     icon: { // 前后小图标
       type: String,
       default: ''
+    },
+    clearable: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
-    return {}
+    return {
+      value: ''
+    }
   },
   computed: {
     styles: {
       get () {
-        return ['base-icon', this.icon]
+        return ['base-icon', !this.clearable ? this.icon : this.value.length > 0 ? 'right icon iconfont icon-shanchu' : '']
       }
     }
   },
-  methods: {}
+  methods: {
+    clickIcon () {
+      if (this.clearable === true) {
+        this.value = '' // 清除内容
+        // 重新获取焦点
+
+      }
+    }
+  },
+  watch: {
+  },
+  mounted () {
+  
+  }
 }
 </script>
 
@@ -40,6 +59,9 @@ export default {
    .base-icon {
      position: absolute;
      top: 6px;
+   }
+   .base-icon:hover {
+     cursor: pointer;
    }
     .left{
      left: 0px!important;
