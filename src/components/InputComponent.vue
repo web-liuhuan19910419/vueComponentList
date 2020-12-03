@@ -1,7 +1,7 @@
 <template>
   <div class="box">
     <i :class="styles" @click="clickIcon"></i>
-    <input type="text" :placeholder="placeholderInfo" v-model="value" autofocus="autofocus" />
+    <input ref="inputDom" type="number" :placeholder="placeholderInfo" v-model="value" autofocus="autofocus" @input="inputEvent"/>
   </div>
 </template>
 
@@ -39,14 +39,18 @@ export default {
       if (this.clearable === true) {
         this.value = '' // 清除内容
         // 重新获取焦点
-
+        this.$refs.inputDom.focus()
+        this.$emit('input', this.value)
       }
+    },
+    inputEvent (){
+      console.log('表内的值发生了变化')
+      this.$emit('input', this.value)
     }
   },
   watch: {
   },
   mounted () {
-  
   }
 }
 </script>
@@ -87,4 +91,8 @@ export default {
     color: #dcdfe6;
     font-size: 12px;
    }
+   input:focus {
+	   border-color:#409eff;
+   }
+
 </style>

@@ -80,11 +80,11 @@
           <text-button-component type="disabled" text="文字按钮禁用" style="margin-left: 10px;"></text-button-component>
         </div>
         <div style="margin-top: 10px;">
-          <!-- <input-component icon="right icon iconfont icon-sousuosearch82" placeholderInfo="带有图标的input框框"></input-component>
-          <input-component placeholderInfo="带有清除的输入框" :clearable="true"></input-component>
-          <input type="text" autofocus="autofocus"> -->
+          <input-component @input="inputChange" icon="right icon iconfont icon-sousuosearch82" placeholderInfo="带有图标的input框框" style="margin-top: 5px;"></input-component>
+          <input-component placeholderInfo="带有清除的输入框" :clearable="true" style="margin-top: 5px;"></input-component>
+          <input type="number">
+          <i class="icon iconfont icon-loading" style="width: 20px; height: 20px;"></i>
         </div>
-        <input type="text" name="fname" autofocus />
       </div>
      </div>
   </div>
@@ -95,11 +95,11 @@ import RadioComponent from '@/components/RadioComponent'
 import MutiRadioComponent from '@/components/MutiRadioComponent'
 import ButtonComponent from '@/components/ButtonComponent'
 import TextButtonComponent from '@/components/TextButtonComponent'
-// import InputComponent from '@/components/InputComponent'
+import InputComponent from '@/components/InputComponent'
 export default {
   name: 'ComponentList',  
   components: {
-    // InputComponent,
+    InputComponent,
     RadioComponent,
     MutiRadioComponent,
     ButtonComponent,
@@ -146,6 +146,9 @@ export default {
     },
     mutiRadioChangeEvent (mutiRadioOptions) {
       console.log(mutiRadioOptions)
+    },
+    inputChange (value) {
+      console.log(value)
     }
   }
 }

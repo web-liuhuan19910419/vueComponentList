@@ -1,5 +1,5 @@
 <template>
-    <button v-if="loading" @click="ClickHandler()" :class="[this.design, this.type, loading ? 'icon iconfont icon-loading' : '']" :disabled="loading">{{ text }}</button>
+    <button v-if="loading" @click="ClickHandler()" :class="[this.design, this.type, loading ? 'el-icon-loading' : '']" :disabled="loading">{{ text }}</button>
     <button v-else @click="ClickHandler()" :class="styles" :disabled="disabled">{{ text }}</button>
 </template>
 
