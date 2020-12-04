@@ -83,14 +83,15 @@
           <input-component @input="inputChange" icon="right icon iconfont icon-sousuosearch82" placeholderInfo="带有图标的input框框" style="margin-top: 5px;"></input-component>
           <input-component placeholderInfo="带有清除的输入框" :clearable="true" style="margin-top: 5px;"></input-component>
           <input type="number">
-          <i class="icon iconfont icon-loading" style="width: 20px; height: 20px;"></i>
         </div>
       </div>
      </div>
+     <input-test-component v-model="testValue"></input-test-component>
   </div>
 </template>
 
 <script>
+import inputTestComponent from '@/components/inputTestComponent'
 import RadioComponent from '@/components/RadioComponent'
 import MutiRadioComponent from '@/components/MutiRadioComponent'
 import ButtonComponent from '@/components/ButtonComponent'
@@ -99,6 +100,7 @@ import InputComponent from '@/components/InputComponent'
 export default {
   name: 'ComponentList',  
   components: {
+    inputTestComponent,
     InputComponent,
     RadioComponent,
     MutiRadioComponent,
@@ -107,6 +109,7 @@ export default {
   },
   data () {
     return {
+      testValue: '09:00',
       data1: '111',
       data2: '222',
       data3: '444',
@@ -149,6 +152,11 @@ export default {
     },
     inputChange (value) {
       console.log(value)
+    }
+  },
+  watch: {
+    testValue(to, from) {
+      console.log(to,from)
     }
   }
 }

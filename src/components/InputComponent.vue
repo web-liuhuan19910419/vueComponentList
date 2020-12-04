@@ -1,7 +1,7 @@
 <template>
   <div class="box">
     <i :class="styles" @click="clickIcon"></i>
-    <input ref="inputDom" type="number" :placeholder="placeholderInfo" v-model="value" autofocus="autofocus" @input="inputEvent"/>
+    <input ref="inputDom" type="text" :placeholder="placeholderInfo" v-model="value" autofocus="autofocus" @input="inputEvent"/>
   </div>
 </template>
 
