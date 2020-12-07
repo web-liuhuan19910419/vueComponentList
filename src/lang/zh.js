@@ -9,6 +9,7 @@ export default {
       alicont: '阿里矢量的使用',
       unknownCss: '你不知道的CSS',
       baseComponent: '基础组件',
+      copyPaste: '复制粘贴',
     }
   }
 }

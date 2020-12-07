@@ -37,13 +37,16 @@
               name: '基本组件', value: '20', checked: false, pathName: 'ComponentList'
             },
             {
-              name: '地址选择组件', value: '21', checked: false
+              name: '复制粘贴', value: '21', checked: false, pathName: 'CopyComponent'
+            },
+            {
+              name: '地址选择组件', value: '22', checked: false
             }, 
             {
-              name: '表单允许加减组件', value: '22', checked: false
+              name: '表单允许加减组件', value: '23', checked: false
             }, 
             {
-              name: '级联选择地址组件', value: '21', checked: false
+              name: '级联选择地址组件', value: '24', checked: false
             }
           ]
         },

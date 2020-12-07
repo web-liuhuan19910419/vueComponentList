@@ -9,6 +9,7 @@ export default {
       alicont: 'Ali Icon Use',
       unknownCss: 'Unknow CSS',
       baseComponent: 'Base Component',
+      copyPaste: 'Copy Paste',
     }
   }
 }

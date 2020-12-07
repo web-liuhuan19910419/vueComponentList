@@ -11,6 +11,7 @@ const ComponentList = () => import('@/pages/ComponentList/ComponentList')
 const CssPage1 = () => import('@/pages/ReaderBooks/CSS/CssPage1')
 const CssPage2 = () => import('@/pages/ReaderBooks/CSS/CssPage2')
 const CssPage3 = () => import('@/pages/ReaderBooks/CSS/CssPage3')
+const CopyComponent = () => import('@/pages/ComponentList/CopyComponent')
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -62,6 +63,11 @@ export default new VueRouter({
       path: '/ComponentList/ComponentList',
       name: 'ComponentList',
       component: ComponentList
+    },
+    {
+      path: '/ComponentList/CopyComponent',
+      name: 'CopyComponent',
+      component: CopyComponent
     },
     {
       path: '/readerBooks/CssUnknown',

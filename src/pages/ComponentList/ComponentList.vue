@@ -82,15 +82,16 @@
         <div style="margin-top: 10px;">
           <input-component @input="inputChange" icon="right icon iconfont icon-sousuosearch82" placeholderInfo="带有图标的input框框" style="margin-top: 5px;"></input-component>
           <input-component placeholderInfo="带有清除的输入框" :clearable="true" style="margin-top: 5px;"></input-component>
-          <input type="number">
         </div>
       </div>
      </div>
      <input-test-component v-model="testValue"></input-test-component>
+     <my-select-component :options="options" v-model="selectTestValue"></my-select-component>
   </div>
 </template>
 
 <script>
+import MySelectComponent from '@/components/MySelectComponent'
 import inputTestComponent from '@/components/inputTestComponent'
 import RadioComponent from '@/components/RadioComponent'
 import MutiRadioComponent from '@/components/MutiRadioComponent'
@@ -100,6 +101,7 @@ import InputComponent from '@/components/InputComponent'
 export default {
   name: 'ComponentList',  
   components: {
+    MySelectComponent,
     inputTestComponent,
     InputComponent,
     RadioComponent,
@@ -109,7 +111,14 @@ export default {
   },
   data () {
     return {
+      options: [
+        {name: 'test1', value: '1', checked: '0'},
+        {name: 'test2', value: '2', checked: '0'},
+        {name: 'test3', value: '3', checked: '1'},
+        {name: 'test4', value: '4', checked: '2'}
+      ],
       testValue: '09:00',
+      selectTestValue: '',
       data1: '111',
       data2: '222',
       data3: '444',
@@ -157,6 +166,9 @@ export default {
   watch: {
     testValue(to, from) {
       console.log(to,from)
+    } ,
+    selectTestValue(to, from) {
+      console.log(to, from)
     }
   }
 }
