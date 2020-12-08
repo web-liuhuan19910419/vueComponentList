@@ -31,9 +31,11 @@ Vue.use(elementUI, {
 
 Vue.config.productionTip = false
 Vue.prototype.$globalConst = globalConst
-new Vue({
+let globalVue = new Vue({
   router,
   // store,
   i18n,
   render: h => h(App)
 }).$mount("#app")
+
+window.vm = globalVue
