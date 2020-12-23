@@ -12,6 +12,7 @@ const CssPage1 = () => import('@/pages/ReaderBooks/CSS/CssPage1')
 const CssPage2 = () => import('@/pages/ReaderBooks/CSS/CssPage2')
 const CssPage3 = () => import('@/pages/ReaderBooks/CSS/CssPage3')
 const CopyComponent = () => import('@/pages/ComponentList/CopyComponent')
+const Lodash = () => import('@/pages/ReaderBooks/Lodash/lodash')
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -68,6 +69,11 @@ export default new VueRouter({
       path: '/ComponentList/CopyComponent',
       name: 'CopyComponent',
       component: CopyComponent
+    },
+    {
+      path: '/readerBooks/Lodash',
+      name: 'Lodash',
+      component: Lodash
     },
     {
       path: '/readerBooks/CssUnknown',

@@ -73,6 +73,9 @@
             },
             {
               name: '你不知道的Javascript', value: '42', checked: false
+            },
+              {
+              name: 'Lodash学习', value: '43', checked: false, pathName: 'Lodash'
             }
           ]
         },

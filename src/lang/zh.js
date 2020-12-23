@@ -10,6 +10,7 @@ export default {
       unknownCss: '你不知道的CSS',
       baseComponent: '基础组件',
       copyPaste: '复制粘贴',
+      lodash: 'Lodash源码'
     }
   }
 }
