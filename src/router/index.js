@@ -8,6 +8,18 @@ const Caculation = () => import('@/pages/TianWen/Caculation')
 const AliIconFont = () => import('@/pages/Project/AliIconFont')
 const CssUnknown = () => import('@/pages/ReaderBooks/CssUnknown')
 const ComponentList = () => import('@/pages/ComponentList/ComponentList')
+const InputComponent = () => import('@/pages/ComponentList/InputComponent')
+const SingleSelect = () => import('@/pages/ComponentList/SingleSelect')
+const Cascader = () => import('@/pages/ComponentList/Cascader')
+const Checked = () => import('@/pages/ComponentList/Checked')
+const PageSwich = () => import('@/pages/ComponentList/PageSwich')
+const Search = () => import('@/pages/ComponentList/Search')
+const Table = () => import('@/pages/ComponentList/Table')
+const Radio = () => import('@/pages/ComponentList/Radio')
+const DatePicker = () => import('@/pages/ComponentList/DatePicker')
+const FileUpload = () => import('@/pages/ComponentList/FileUpload')
+const ImportExcel = () => import('@/pages/ComponentList/ImportExcel')
+const ExportExcel = () => import('@/pages/ComponentList/ExportExcel')
 const CssPage1 = () => import('@/pages/ReaderBooks/CSS/CssPage1')
 const CssPage2 = () => import('@/pages/ReaderBooks/CSS/CssPage2')
 const CssPage3 = () => import('@/pages/ReaderBooks/CSS/CssPage3')
@@ -64,6 +76,66 @@ export default new VueRouter({
       path: '/ComponentList/ComponentList',
       name: 'ComponentList',
       component: ComponentList
+    },
+    {
+      path: '/ComponentList/InputComponent',
+      name: 'InputComponent',
+      component: InputComponent
+    },
+    {
+      path: '/ComponentList/singleSelect',
+      name: 'SingleSelect',
+      component: SingleSelect
+    },
+    {
+      path: '/ComponentList/cascader',
+      name: 'Cascader',
+      component: Cascader
+    },
+    {
+      path: '/ComponentList/Checked',
+      name: 'Checked',
+      component: Checked
+    },
+    {
+      path: '/ComponentList/radio',
+      name: 'Radio',
+      component: Radio
+    },
+    {
+      path: '/ComponentList/datePicker',
+      name: 'DatePicker',
+      component: DatePicker
+    },
+    {
+      path: '/ComponentList/search',
+      name: 'Search',
+      component: Search
+    },
+    {
+      path: '/ComponentList/importExcel',
+      name: 'ImportExcel',
+      component: ImportExcel
+    },
+    {
+      path: '/ComponentList/exportExcel',
+      name: 'ExportExcel',
+      component: ExportExcel
+    },
+    {
+      path: '/ComponentList/fileUpload',
+      name: 'FileUpload',
+      component: FileUpload
+    },
+    {
+      path: '/ComponentList/pageSwich',
+      name: 'PageSwich',
+      component: PageSwich
+    },
+    {
+      path: '/ComponentList/tabel',
+      name: 'Table',
+      component: Table
     },
     {
       path: '/ComponentList/CopyComponent',

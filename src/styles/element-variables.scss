@@ -1,0 +1,92 @@
+/**
+* 要修改element组件内部的常见样式，可以在此文件覆盖，同样如果不是element的组件，
+  为了和element风格保持一致，请在封装的时候尽量用这个文件的样式变量。
+**/
+
+/* 主题颜色的常见覆盖 */
+$--color-primary: #3f91ed;
+$--color-success: #56cda2;
+$--color-warning: #f09608;
+$--color-danger: #e53646;
+$--color-info: #95969c;
+
+$--color-white: #ffffff;
+$--color-black: #000000;
+
+$--color-primary-light-1: mix($--color-white, $--color-primary, 10%); /* 53a8ff */
+$--color-primary-light-2: mix($--color-white, $--color-primary, 20%); /* 66b1ff */
+$--color-primary-light-3: mix($--color-white, $--color-primary, 30%); /* 79bbff */
+$--color-primary-light-4: mix($--color-white, $--color-primary, 40%); /* 8cc5ff */
+$--color-primary-light-5: mix($--color-white, $--color-primary, 50%); /* a0cfff */
+$--color-primary-light-6: mix($--color-white, $--color-primary, 60%); /* b3d8ff */
+$--color-primary-light-7: mix($--color-white, $--color-primary, 70%); /* c6e2ff */
+$--color-primary-light-8: mix($--color-white, $--color-primary, 80%); /* d9ecff */
+$--color-primary-light-9: mix($--color-white, $--color-primary, 90%); /* ecf5ff */
+
+$--color-success-light: mix($--color-white, $--color-success, 80%);
+$--color-warning-light: mix($--color-white, $--color-warning, 80%);
+$--color-danger-light: mix($--color-white, $--color-danger, 80%);
+$--color-info-light: mix($--color-white, $--color-info, 80%);
+
+$--color-success-lighter: mix($--color-white, $--color-success, 90%);
+$--color-warning-lighter: mix($--color-white, $--color-warning, 90%);
+$--color-danger-lighter: mix($--color-white, $--color-danger, 90%);
+$--color-info-lighter: mix($--color-white, $--color-info, 90%);
+
+/*字体颜色覆盖*/
+$--color-text-primary: #37383b;
+$--color-text-regular: #37383b;
+$--color-text-secondary: #95969c;
+$--color-text-placeholder: #d8dbe2;
+
+/*字体大小轻重覆盖*/
+$--size-base: 14px;
+$--font-size-extra-large: 20px;
+$--font-size-large: 18px;
+$--font-size-medium: 16px;
+$--font-size-base: 14px;
+$--font-size-small: 13px;
+$--font-size-extra-small: 12px;
+$--font-weight-primary: 500;
+$--font-weight-secondary: 100;
+$--font-line-height-primary: 24px;
+$--font-line-height-secondary: 16px;
+$--font-color-disabled-base: #bbb;
+
+/*border颜色覆盖*/
+$--border-color-base: #d8dbe2;
+$--border-color-light: #edf0f6;
+$--border-color-lighter: #edf0f6;
+$--border-color-extra-light: #edf0f6;
+
+/*border其他常见样式覆盖*/
+$--border-width-base: 1px;
+$--border-style-base: solid;
+$--border-color-hover: $--color-text-placeholder;
+$--border-base: $--border-width-base $--border-style-base $--border-color-base;
+$--border-radius-base: 4px;
+$--border-radius-small: 2px;
+$--border-radius-circle: 100%;
+$--border-radius-zero: 0;
+
+/*z-index的设置*/
+$--index-normal: 1;
+$--index-top: 1000;
+$--index-popper: 2000;
+
+$--background-color-base: #f5f7fa;
+$--button-font-weight: 400;
+$--table-border: 1px solid #dfe6ec;
+
+/* icon font path, required */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import '~element-ui/packages/theme-chalk/src/index';
+//@import '@/assets/style/theme/index.css' // 自定义主题
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  theme: $--color-primary;
+  colorPrimary: $--color-primary;
+}

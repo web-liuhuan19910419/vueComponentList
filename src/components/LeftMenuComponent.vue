@@ -36,6 +36,36 @@
             {
               name: '基本组件', value: '20', checked: false, pathName: 'ComponentList'
             },
+             {
+              name: 'input', value: '21', checked: false, pathName: 'InputComponent'
+            },
+             {
+              name: 'date', value: '21', checked: false, pathName: 'DatePicker'
+            },
+            {
+              name: 'singleSelect', value: '22', checked: false, pathName: 'SingleSelect'
+            },
+             {
+              name: 'cascader', value: '23', checked: false, pathName: 'Cascader'
+            },
+             {
+              name: 'search', value: '24', checked: false, pathName: 'Search'
+            },
+             {
+              name: 'table', value: '25', checked: false, pathName: 'Table'
+            },
+             {
+              name: 'pageSwich', value: '26', checked: false, pathName: 'PageSwich'
+            },
+             {
+              name: 'upload', value: '27', checked: false, pathName: 'FileUpload'
+            },
+            {
+              name: 'Import Excel', value: '27', checked: false, pathName: 'ImportExcel'
+            },
+            {
+              name: 'Export Excel', value: '27', checked: false, pathName: 'Export Excel'
+            },
             {
               name: '复制粘贴', value: '21', checked: false, pathName: 'CopyComponent'
             },

@@ -1,7 +1,21 @@
+@import 'element-variables.scss';
+
 // 自定义组件的字体大小,为了和element保持一致, medium: 14px    mini: 12px    small: 12px
 $wms-font-size-medium: 14px;
 $wms-font-size-small: 12px;
 $wms-font-size-mini: 12px;
+
+$wms-color-text-primary: $--color-text-primary; // 主题字体颜色
+$wms-color-text-regular: $--color-text-regular; // 如果不指定字体颜色，默认显示的是这个颜色
+$wms-color-text-secondary: $--color-text-secondary; // 次要文字颜色
+$wms-color-text-product: #8cbdf4; // 商品名称的颜色
+$wms-color-text-inventory: #95969c; // 商品库存名称的颜色
+$wms-color-text-upc: #f3ab39; // upc颜色
+$wms-color-text-asin: #3f91ed; // 商品的asin或者其他可跳转的颜色
+$wms-color-text-danger: #e53646; // 系统标红的颜色
+$wms-color-background-detail: #f1f4f9; // 详情的标题栏背景颜色
+// 比较常用的标记颜色
+
 // base color
 $blue: #324157;
 $light-blue: #3a71a8;
@@ -13,16 +27,15 @@ $yellow: #fec171;
 $panGreen: #30b08f;
 
 // sidebar
-$menuText: #bfcbd9;
-$menuActiveText: #409eff;
+$menuText: #d9e9fb;
+$menuActiveText: #3f91ed;
 $subMenuActiveText: #f4f4f5; // https://github.com/ElemeFE/element/issues/12951
 
-$menuBg: #304156;
-$menuHover: #263445;
+$menuBg: #193a5f;
+$menuHover: #040d18; // #263445;
 
-$subMenuBg: #1f2d3d;
-$subMenuHover: #001528;
-
+$subMenuBg: #0d1d2f;
+$subMenuHover: #040d18;
 $sideBarWidth: 210px;
 
 $fontSizeBase: 13px;
@@ -31,12 +44,19 @@ $fontSizeBase: 13px;
 // https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
 :export {
   menuText: $menuText;
-  menuactivetext: $menuActiveText;
-  submenuactivetext: $subMenuActiveText;
-  menubg: $menuBg;
-  menuhover: $menuHover;
-  submenubg: $subMenuBg;
-  submenuhover: $subMenuHover;
-  sidebarwidth: $sideBarWidth;
-  fontSizeBase: $fontSizeBase;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+  wmsColorTextPrimary: $wms-color-text-primary;
+  wmsColorTextRegular: $wms-color-text-regular;
+  wmsColorTextSoldProduct: $wms-color-text-product;
+  wmsColorTextInventory: $wms-color-text-inventory;
+  wmsColorTextAsin: $wms-color-text-asin;
+  wmsColorTextUpc: $wms-color-text-upc;
+  wmsColorTextDanger: $wms-color-text-danger;
+  wmsColorTextSecondary: $wms-color-text-secondary;
 }
