@@ -62,7 +62,7 @@
                 style="margin-right: 10px;"
                 v-for="(bItem, bIndex) in item.publicShowFun(
                   scope.row.indexSNO !== undefined ? scope.row.indexSNO : scope.$index,
-                  scope.row.srcObj
+                  scope.row
                 )"
                 :key="bIndex.toString() + getUUID()"
               >
@@ -277,7 +277,7 @@
                   <el-dropdown-item
                     v-for="itemOption in item.publicShowFun(
                       scope.row.indexSNO !== undefined ? scope.row.indexSNO : scope.$index,
-                      scope.row.srcObj
+                      scope.row
                     )"
                     :key="itemOption.title"
                     :command="itemOption.title"
@@ -316,18 +316,19 @@
             >
               <div
                 style="margin-top: 3px;display: flex;justify-content: space-between"
-                v-for="(itemData, index) in item.publicShowFun(
+                v-for="(itemData, indexC) in item.publicShowFun(
                   scope.row.indexSNO !== undefined ? scope.row.indexSNO : scope.$index,
-                  scope.row.srcObj
+                  scope.row
                 )"
-                :key="index.toString() + 'moreInput'"
+                :key="indexC.toString() + 'moreInput'"
               >
                 <span v-if="itemData && itemData.title && itemData.title.length > 0">{{
                   itemData.title
                 }}</span>
                 <el-input-number
+                  v-if="scope.row[item.attr]"
                   style="margin-left: 3px"
-                  v-model="scope.row.cellDataArray[index][itemData.attr]"
+                  v-model="scope.row[item.attr][indexC][itemData.attr]"
                   v-bind="
                     typeof itemData.otherPropsFun === 'function'
                       ? itemData.otherPropsFun(
@@ -343,8 +344,9 @@
                       handleInputFunClick(
                         content,
                         scope.row.indexSNO !== undefined ? scope.row.indexSNO : scope.$index,
-                        index,
-                        itemData
+                        scope.row,
+                        item,
+                        indexC
                       )
                     }
                   "
@@ -693,6 +695,17 @@ export default {
     onSetValue(val, $f) {
       this.tableData = val
     },
+    //
+    addRowData(val, $f) {
+      if (val) {
+        this.tableData.push(val)
+      }
+    },
+    delRowData(index, $f) {
+      if (index >= 0 && index < this.tableData.length) {
+        this.tableData.splice(index, 1)
+      }
+    },
     handleFunClick(row, actionIndex, attr) {
       this.$emit('on-operating-action', row, actionIndex, attr)
     },
@@ -711,7 +724,7 @@ export default {
     handleInputFunClick(content, indexSNO, rowData, item, tableDataIndex) {
       console.log('handleInputFunClick =' + content)
       if (item !== undefined && typeof item.changeValueFun === 'function') {
-        item.changeValueFun(indexSNO, 0, content, rowData.srcObj, this.tableData)
+        item.changeValueFun(indexSNO, tableDataIndex || 0, content, rowData, this.tableData)
       }
       this.$emit('input', this.tableData)
     },
@@ -757,7 +770,7 @@ export default {
       let flag = false
       let itemBtnList = item.publicShowFun(
         scope.row.indexSNO !== undefined ? scope.row.indexSNO : scope.$index,
-        scope.row.srcObj
+        scope.row
       )
       if (item.dropdownCutCount && itemBtnList && itemBtnList.length >= item.dropdownCutCount) {
         flag = true

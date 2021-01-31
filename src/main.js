@@ -5,7 +5,7 @@ import globalConst from './utitls/globlaConst' // 全局一些常量
 import storage from '@/storage/storage'
 
 import '@/assets/icons/iconfont.css' // 引入项目中的所有的icon
-
+import lodash from 'lodash'
 // 引入vue element组件库
 import ElementUI from "element-ui"
 import elementVar from '@/styles/element-variables.scss'
@@ -19,7 +19,7 @@ Vue.use(VueCookies)
 // 引入国际化的预言
 import i18n from "./lang/index"
 Vue.use(ElementUI, { size: storage.getStorage('wms_size') || 'mini', zIndex: 9000 })
-
+Vue.prototype.$lodash = lodash
 
 
 Vue.config.productionTip = false
